@@ -7,7 +7,7 @@ router.get('/user', ver, (req, res) => {
 	res.send('user');
 });
 router.get('/login', (req, res) => {
-	res.send('asdasdasasdasdasdasd');
+	res.send('asdasdasasdasdd');
 });
 router.get('/auth/google', passport.authenticate('google', { scope: [ 'profile' ] }));
 router.get('/auth/google/callback', passport.authenticate('google', { failureRedirect: '/login' }), (req, res) => {
