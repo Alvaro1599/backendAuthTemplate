@@ -4,9 +4,14 @@ const passport = require('passport');
 const jwt = require('../controllers/jwt');
 const ver = require('../middleware/jwt');
 router.get('/user', ver, (req, res) => {
+	//there is goin to a new logic
+	//remember add middleware to all routes that need to be protected
+	//ver is middleware that verifies the token
 	res.send('user');
 });
 router.get('/login', (req, res) => {
+	//there is goin to a new logic
+	//remember add middleware to all routes that need to be protected
 	res.send('asdasdasasdasdd');
 });
 router.get('/auth/google', passport.authenticate('google', { scope: [ 'profile' ] }));
